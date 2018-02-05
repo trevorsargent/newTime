@@ -26,6 +26,20 @@ const sumTime = (str) => {
     }, 0)
 }
 
+const updateTime = () => {
+  const now = new Date()
+  const hour = now.getHours()
+  const minute = now.getMinutes()
+
+  const str = assembleTime(hour, minute)
+  const sum = sumTime(str)
+
+  const num = A[sum].findIndex(x => x === str) + 1
+
+  dispSum.innerText = sum
+  dispNum.innerText = num
+}
+
 let A = new Array(26)
 
 for (let i = 0; i < A.length; i++) {
@@ -43,17 +57,5 @@ console.log(A)
 const dispSum = document.getElementById('sum')
 const dispNum = document.getElementById('num')
 
-setInterval(() => {
-
-  const now = new Date()
-  const hour = now.getHours()
-  const minute = now.getMinutes()
-
-  const str = assembleTime(hour, minute)
-  const sum = sumTime(str)
-
-  const num = A[sum].findIndex(x => x === str) + 1
-
-  dispSum.innerText = sum
-  dispNum.innerText = num
-}, 1000)
+updateTime()
+setInterval(updateTime, 1000)

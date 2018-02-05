@@ -14,17 +14,17 @@ body{
 
 #sum{
 	font-size: 250px;
-	
+	margin-bottom: 50px;
 }
 
 #slash{
 	font-size: 65px;
-	margin-top: 230px;
+	margin-top: 180px;
 	margin-left: -10px
 }
 
 #num{
-		margin-top: 248px;
+		margin-top: 198px;
 		margin-left: 10px;
 	font-size: 45px;
 }
