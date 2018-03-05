@@ -32,5 +32,8 @@
 	"bugs": {
 		"url": "https://github.com/trevorsargent/boiler/issues"
 	},
-	"homepage": "https://github.com/trevorsargent/boiler#readme"
+	"homepage": "https://github.com/trevorsargent/boiler#readme",
+	"dependencies": {
+		"express": "^4.16.2"
+	}
 }
