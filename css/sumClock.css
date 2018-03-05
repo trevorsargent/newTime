@@ -1,0 +1,31 @@
+#sumClock{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Oswald', sans-serif;
+	height: 100vh;
+}
+
+#sum, #slash, #num{
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+}
+
+#sum{
+	font-size: 250px;
+	margin-bottom: 50px;
+}
+
+#slash{
+	font-size: 65px;
+	margin-top: 180px;
+	margin-left: -10px
+}
+
+#num{
+		margin-top: 198px;
+		margin-left: 10px;
+	font-size: 45px;
+}
+
