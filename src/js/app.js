@@ -5,4 +5,5 @@ const dispNum = document.getElementById('sum-clock-num')
 
 Sum.setup()
 const updateTime = Sum.makeUpdateTime(dispSum, dispNum)
+updateTime()
 setInterval(updateTime, 1000)
