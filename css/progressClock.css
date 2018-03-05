@@ -10,6 +10,7 @@
 
 .bar {
 	background: black;
+	transition: all 1s linear;
 }
 
 #h{

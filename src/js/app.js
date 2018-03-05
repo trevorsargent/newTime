@@ -13,7 +13,7 @@ if (sumClock) {
   Sum.setup()
 
   updateTime = Sum.makeUpdateTime(dispSum, dispNum)
-  freq = 1000
+  updateTime()
 }
 
 // #2 -- Progress (Bars)
@@ -24,10 +24,12 @@ if (progress) {
   const s = document.getElementById('s')
 
   updateTime = Progress.makeUpdateTime(h, m, s)
-  freq = 10
 }
 
 // #3 -- Vertical Binary
+const binary = document.getElementById('binaryClock')
+if (binary) {
+}
 
 // #4 -- Segmented
 
@@ -46,7 +48,5 @@ if (progress) {
 // #11 - Angle Sweep
 
 // #12 - Unix
-
-updateTime()
 
 setInterval(updateTime, freq)
