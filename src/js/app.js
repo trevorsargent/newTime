@@ -1,5 +1,6 @@
 import * as Sum from './sumClock.js'
 import * as Progress from './progressClock.js'
+import * as Binary from './binaryClock.js'
 
 let updateTime
 let freq
@@ -13,7 +14,6 @@ if (sumClock) {
   Sum.setup()
 
   updateTime = Sum.makeUpdateTime(dispSum, dispNum)
-  updateTime()
 }
 
 // #2 -- Progress (Bars)
@@ -29,6 +29,11 @@ if (progress) {
 // #3 -- Vertical Binary
 const binary = document.getElementById('binaryClock')
 if (binary) {
+  const h = document.getElementById('h')
+  const m = document.getElementById('m')
+  const s = document.getElementById('s')
+
+  updateTime = Binary.makeUpdateTime(h, m, s)
 }
 
 // #4 -- Segmented
@@ -49,4 +54,5 @@ if (binary) {
 
 // #12 - Unix
 
-setInterval(updateTime, freq)
+updateTime()
+setInterval(updateTime, 1000)
