@@ -6,24 +6,24 @@ body{
 	
 }
 
-#sum, #slash, #num{
+#sum-clock-sum, #sum-clock-slash, #sum-clock-num{
 	font-weight: 200;
 	margin: 0;
 	padding: 0;
 }
 
-#sum{
+#sum-clock-sum{
 	font-size: 250px;
 	margin-bottom: 50px;
 }
 
-#slash{
+#sum-clock-slash{
 	font-size: 65px;
 	margin-top: 180px;
 	margin-left: -10px
 }
 
-#num{
+#sum-clock-num{
 		margin-top: 198px;
 		margin-left: 10px;
 	font-size: 45px;
