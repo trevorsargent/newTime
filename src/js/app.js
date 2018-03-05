@@ -1,6 +1,7 @@
 import * as Sum from './sumClock.js'
 import * as Progress from './progressClock.js'
 import * as Binary from './binaryClock.js'
+import * as Segment from './segmentClock.js'
 
 let updateTime
 let freq
@@ -37,6 +38,18 @@ if (binary) {
 }
 
 // #4 -- Segmented
+const segment = document.getElementById('segmentClock')
+if (segment) {
+  const h1 = document.getElementById('h1')
+  const h2 = document.getElementById('h2')
+  const m1 = document.getElementById('m1')
+  const m2 = document.getElementById('m2')
+  const s1 = document.getElementById('s1')
+  const s2 = document.getElementById('s2')
+  const arr = [h1, h2, m1, m2, s1, s2]
+
+  updateTime = Segment.makeUpdateTime(arr)
+}
 
 // #5 -- Count Down
 
