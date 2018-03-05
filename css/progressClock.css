@@ -1,0 +1,26 @@
+#progressClock{
+	box-sizing: border-box;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr repeat(3, 10px) 1fr;
+	grid-gap: 50px;
+	padding: 50px;
+}
+
+.bar {
+	background: black;
+}
+
+#h{
+	grid-row: 2;
+}
+
+#m{
+	grid-row: 3;
+}
+
+#s{
+	grid-row: 4;
+}
+
