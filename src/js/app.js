@@ -2,6 +2,7 @@ import * as Sum from './sumClock.js'
 import * as Progress from './progressClock.js'
 import * as Binary from './binaryClock.js'
 import * as Segment from './segmentClock.js'
+import * as Down from './downClock.js'
 
 let updateTime
 let freq
@@ -52,7 +53,14 @@ if (segment) {
 }
 
 // #5 -- Count Down
+const down = document.getElementById('downClock')
+if (down) {
+  const h = document.getElementById('h')
+  const m = document.getElementById('m')
+  const s = document.getElementById('s')
 
+  updateTime = Down.makeUpdateTime(h, m, s)
+}
 // #6 -- Decimal Time
 
 // #7 -- Angles of Hands
