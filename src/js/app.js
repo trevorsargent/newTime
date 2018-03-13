@@ -3,9 +3,11 @@ import * as Progress from './progressClock.js'
 import * as Binary from './binaryClock.js'
 import * as Segment from './segmentClock.js'
 import * as Down from './downClock.js'
+import * as Decimal from './decimalClock.js'
+import * as Angle from './angleClock.js'
 
 let updateTime
-let freq
+let freq = 1000
 
 // #1 -- SumClock
 const sumClock = document.getElementById('sumClock')
@@ -62,8 +64,22 @@ if (down) {
   updateTime = Down.makeUpdateTime(h, m, s)
 }
 // #6 -- Decimal Time
+const decimal = document.getElementById('decimalClock')
+if (decimal) {
+  const h = document.getElementById('h')
+  const m = document.getElementById('m')
+  const s = document.getElementById('s')
+
+  updateTime = Decimal.makeUpdateTime(h, m, s)
+  freq = 10
+}
 
 // #7 -- Angles of Hands
+const angle = document.getElementById('angleClock')
+if (angle) {
+  updateTime = Angle.makeUpdateTime(angle)
+  freq = 10
+}
 
 // #8 -- Digit Representation
 
@@ -76,4 +92,4 @@ if (down) {
 // #12 - Unix
 
 updateTime()
-setInterval(updateTime, 1000)
+setInterval(updateTime, freq)
