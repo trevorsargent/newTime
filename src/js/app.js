@@ -8,6 +8,8 @@ import * as AngleReadout from './angleReadoutClock.js'
 import * as Digit from './digitClock.js'
 import * as AngleSweep from './angleSweepClock.js'
 import * as Color from './colorClock.js'
+import * as Cardinal from './cardinalClock.js'
+import * as Unix from './unixClock.js'
 
 let updateTime
 let freq = 1000
@@ -106,9 +108,23 @@ const color = document.getElementById('colorClock')
 if (color) {
 	updateTime = Color.makeUpdateTime(color)
 }
-// #11 - 
+
+// #11 - Cardinal Time
+const cardinal = document.getElementById('cardinalClock')
+if (cardinal) {
+	const h = document.getElementById('h')
+	const m = document.getElementById('m')
+	const s = document.getElementById('s')
+	updateTime = Cardinal.makeUpdateTime(h, m, s)
+	freq = 10;
+}
 
 // #12 - Unix
+const unix = document.getElementById('unixClock')
+if (unix) {
+	updateTime = Unix.makeUpdateTime(unix)
+	freq = 10
+}
 
 updateTime()
 setInterval(updateTime, freq)

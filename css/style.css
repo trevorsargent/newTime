@@ -2,3 +2,61 @@ body{
 	margin: 0;
 	padding: 0;
 }
+
+.index{
+	font-family: 'Oswald', sans-serif;
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 70px 140px;
+	box-sizing: border-box;
+}
+
+.index a{
+	text-decoration: none;
+	color: black;
+	font-size: 80px;
+	padding: 20px;
+	margin: 0 60px;
+	transition: all .3s;
+}
+
+.index a:hover{
+	color: white;
+	background: black;
+}
+
+.backArrow{
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	transition: all .3s
+}
+
+.arrowShape{
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	border-left: 2px solid black;
+	border-bottom: 2px solid black;
+	top: 25px;
+	left: 30px;
+	box-sizing: border-box;
+	transform: rotateZ(45deg);
+	transition: all .3;
+}
+
+.backArrow:hover {
+	background: black;
+}
+
+.backArrow:hover .arrowShape{
+	border-left: 2px solid white;
+	border-bottom: 2px solid white;
+}
