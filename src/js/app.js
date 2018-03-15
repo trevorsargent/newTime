@@ -5,6 +5,7 @@ import * as Segment from './segmentClock.js'
 import * as Down from './downClock.js'
 import * as Decimal from './decimalClock.js'
 import * as AngleReadout from './angleReadoutClock.js'
+import * as Digit from './digitClock.js'
 import * as AngleSweep from './angleSweepClock.js'
 
 let updateTime
@@ -87,10 +88,9 @@ if (angleReadout) {
 // #8 -- Digit Representation
 const digit = document.getElementById('digitClock')
 if (digit) {
-	const h = document.getElementById('h')
-	const m = document.getElementById('m')
-	const s = document.getElementById('s')
-	updateTime = Digit.makeUpdateTime()
+	const arr = document.getElementsByClassName('digit')
+	console.log(arr)
+	updateTime = Digit.makeUpdateTime(arr)
 }
 
 // #9 -- Angles between Hands
