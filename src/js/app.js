@@ -4,6 +4,7 @@ import * as Binary from './binaryClock.js'
 import * as Segment from './segmentClock.js'
 import * as Down from './downClock.js'
 import * as Decimal from './decimalClock.js'
+import * as AngleReadout from './angleReadoutClock.js'
 import * as AngleSweep from './angleSweepClock.js'
 
 let updateTime
@@ -16,7 +17,6 @@ if (sumClock) {
 	const dispNum = document.getElementById('num')
 
 	Sum.setup()
-
 	updateTime = Sum.makeUpdateTime(dispSum, dispNum)
 }
 
@@ -75,14 +75,21 @@ if (decimal) {
 }
 
 // #7 -- Angles Of Hands
-const handAngle = document.getElementById('handAngleClock')
-if (handAngle) {
-	updateTime = HandAngle.makeUpdateTime()
+const angleReadout = document.getElementById('angleReadoutClock')
+if (angleReadout) {
+	const h = document.getElementById('h')
+	const m = document.getElementById('m')
+	const s = document.getElementById('s')
+
+	updateTime = AngleReadout.makeUpdateTime(h, m, s)
 }
 
 // #8 -- Digit Representation
 const digit = document.getElementById('digitClock')
 if (digit) {
+	const h = document.getElementById('h')
+	const m = document.getElementById('m')
+	const s = document.getElementById('s')
 	updateTime = Digit.makeUpdateTime()
 }
 
