@@ -4,7 +4,7 @@ import * as Binary from './binaryClock.js'
 import * as Segment from './segmentClock.js'
 import * as Down from './downClock.js'
 import * as Decimal from './decimalClock.js'
-import * as Angle from './angleClock.js'
+import * as AngleSweep from './angleSweepClock.js'
 
 let updateTime
 let freq = 1000
@@ -12,85 +12,85 @@ let freq = 1000
 // #1 -- SumClock
 const sumClock = document.getElementById('sumClock')
 if (sumClock) {
-  const dispSum = document.getElementById('sum')
-  const dispNum = document.getElementById('num')
+	const dispSum = document.getElementById('sum')
+	const dispNum = document.getElementById('num')
 
-  Sum.setup()
+	Sum.setup()
 
-  updateTime = Sum.makeUpdateTime(dispSum, dispNum)
+	updateTime = Sum.makeUpdateTime(dispSum, dispNum)
 }
 
 // #2 -- Progress (Bars)
 const progress = document.getElementById('progressClock')
 if (progress) {
-  const h = document.getElementById('h')
-  const m = document.getElementById('m')
-  const s = document.getElementById('s')
+	const h = document.getElementById('h')
+	const m = document.getElementById('m')
+	const s = document.getElementById('s')
 
-  updateTime = Progress.makeUpdateTime(h, m, s)
+	updateTime = Progress.makeUpdateTime(h, m, s)
 }
 
 // #3 -- Vertical Binary
 const binary = document.getElementById('binaryClock')
 if (binary) {
-  const h = document.getElementById('h')
-  const m = document.getElementById('m')
-  const s = document.getElementById('s')
+	const h = document.getElementById('h')
+	const m = document.getElementById('m')
+	const s = document.getElementById('s')
 
-  updateTime = Binary.makeUpdateTime(h, m, s)
+	updateTime = Binary.makeUpdateTime(h, m, s)
 }
 
 // #4 -- Segmented
 const segment = document.getElementById('segmentClock')
 if (segment) {
-  const h1 = document.getElementById('h1')
-  const h2 = document.getElementById('h2')
-  const m1 = document.getElementById('m1')
-  const m2 = document.getElementById('m2')
-  const s1 = document.getElementById('s1')
-  const s2 = document.getElementById('s2')
-  const arr = [h1, h2, m1, m2, s1, s2]
+	const h1 = document.getElementById('h1')
+	const h2 = document.getElementById('h2')
+	const m1 = document.getElementById('m1')
+	const m2 = document.getElementById('m2')
+	const s1 = document.getElementById('s1')
+	const s2 = document.getElementById('s2')
+	const arr = [h1, h2, m1, m2, s1, s2]
 
-  updateTime = Segment.makeUpdateTime(arr)
+	updateTime = Segment.makeUpdateTime(arr)
 }
 
 // #5 -- Count Down
 const down = document.getElementById('downClock')
 if (down) {
-  const h = document.getElementById('h')
-  const m = document.getElementById('m')
-  const s = document.getElementById('s')
+	const h = document.getElementById('h')
+	const m = document.getElementById('m')
+	const s = document.getElementById('s')
 
-  updateTime = Down.makeUpdateTime(h, m, s)
+	updateTime = Down.makeUpdateTime(h, m, s)
 }
 // #6 -- Decimal Time
 const decimal = document.getElementById('decimalClock')
 if (decimal) {
-  const h = document.getElementById('h')
-  const m = document.getElementById('m')
-  const s = document.getElementById('s')
+	const h = document.getElementById('h')
+	const m = document.getElementById('m')
+	const s = document.getElementById('s')
 
-  updateTime = Decimal.makeUpdateTime(h, m, s)
-  freq = 10
+	updateTime = Decimal.makeUpdateTime(h, m, s)
+	freq = 10
 }
 
 // #7 -- Angles Of Hands
 const handAngle = document.getElementById('handAngleClock')
 if (handAngle) {
-  updateTime = HandAngle.makeUpdateTime()
+	updateTime = HandAngle.makeUpdateTime()
 }
 
 // #8 -- Digit Representation
 const digit = document.getElementById('digitClock')
 if (digit) {
-  updateTime = Digit.makeUpdateTime()
+	updateTime = Digit.makeUpdateTime()
 }
 
 // #9 -- Angles between Hands
-const angle = document.getElementById('angleClock')
-if (angle) {
-  updateTime = Angle.makeUpdateTime(angle)
-  freq = 10
+const angleSweep = document.getElementById('angleSweepClock')
+if (angleSweep) {
+	updateTime = AngleSweep.makeUpdateTime(angleSweep)
+	freq = 10
 }
 
 // #10 - Color Time
