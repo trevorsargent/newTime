@@ -7,6 +7,7 @@ import * as Decimal from './decimalClock.js'
 import * as AngleReadout from './angleReadoutClock.js'
 import * as Digit from './digitClock.js'
 import * as AngleSweep from './angleSweepClock.js'
+import * as Color from './colorClock.js'
 
 let updateTime
 let freq = 1000
@@ -101,7 +102,11 @@ if (angleSweep) {
 }
 
 // #10 - Color Time
-
+const color = document.getElementById('colorClock')
+if (color) {
+	updateTime = Color.makeUpdateTime(color)
+	freq = 10
+}
 // #11 - 
 
 // #12 - Unix
