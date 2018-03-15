@@ -105,7 +105,6 @@ if (angleSweep) {
 const color = document.getElementById('colorClock')
 if (color) {
 	updateTime = Color.makeUpdateTime(color)
-	freq = 10
 }
 // #11 - 
 

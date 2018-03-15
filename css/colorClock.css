@@ -1,0 +1,11 @@
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#colorClock{
+	width: 50vh;
+	height: 50vh;
+	border-radius: 50%;
+}
