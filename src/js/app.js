@@ -74,20 +74,28 @@ if (decimal) {
   freq = 10
 }
 
-// #7 -- Angles of Hands
+// #7 -- Angles Of Hands
+const handAngle = document.getElementById('handAngleClock')
+if (handAngle) {
+  updateTime = HandAngle.makeUpdateTime()
+}
+
+// #8 -- Digit Representation
+const digit = document.getElementById('digitClock')
+if (digit) {
+  updateTime = Digit.makeUpdateTime()
+}
+
+// #9 -- Angles between Hands
 const angle = document.getElementById('angleClock')
 if (angle) {
   updateTime = Angle.makeUpdateTime(angle)
   freq = 10
 }
 
-// #8 -- Digit Representation
-
-// #9 -- Angles Between the Hands
-
 // #10 - Color Time
 
-// #11 - Angle Sweep
+// #11 - 
 
 // #12 - Unix
 

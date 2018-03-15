@@ -1,17 +1,4 @@
-const hourHandAngle = (h, m, s) => {
-  const frac = (h % 12 + m / 60 + s / 60 / 60) / 12
-  return frac * 2 * Math.PI
-}
-
-const minHandAngle = (m, s) => {
-  const frac = (m / 60 + s / 60 / 60)
-  return frac * 2 * Math.PI
-}
-
-const secHandAngle = (s, m) => {
-  const frac = s / 60 + m / 1000 / 60
-  return frac * 2 * Math.PI
-}
+import { hourHandAngle, minHandAngle, secHandAngle } from './analog.js'
 
 export const makeUpdateTime = (a) => () => {
 
@@ -34,9 +21,9 @@ export const makeUpdateTime = (a) => () => {
   c.translate(w / 2, h / 2)
   c.rotate(Math.PI / -2)
 
-  let hourAngle = hourHandAngle(hour, mins, secs)
-  let minAngle = minHandAngle(mins, secs)
-  let secAngle = secHandAngle(secs, mili)
+  let hourAngle = hourHandAngle(hour, mins, secs) * 2 * Math.PI
+  let minAngle = minHandAngle(mins, secs) * 2 * Math.PI
+  let secAngle = secHandAngle(secs, mili) * 2 * Math.PI
 
   while (minAngle < hourAngle) {
     minAngle += 2 * Math.PI
