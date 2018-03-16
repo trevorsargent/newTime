@@ -5,6 +5,7 @@ body{
 }
 
 #colorClock{
+	transition: all .7s;
 	width: 50vh;
 	height: 50vh;
 	border-radius: 50%;

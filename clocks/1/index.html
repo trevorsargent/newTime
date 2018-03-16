@@ -1,23 +1,39 @@
 <html>
 
-	<head>
-		<title>New Time: 1</title>
-		<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
-		<link rel="stylesheet" href="../../css/style.css">
-		<link rel="stylesheet" href="../../css/sumClock.css">
-	</head>
+<head>
+	<title>New Time: 1</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/sumClock.css">
+</head>
 
-	<body>
-		<a href="../../" class="backArrow">
-			<div class="arrowShape">
-			</div>
-		</a>
-		<div id="sumClock">
-			<h1 id="sum"></h1>
-			<h1 id="slash">/</h1>
-			<h2 id="num"></h2>
+<body>
+	<a href="../../" class="backArrow">
+		<div class="arrowShape">
 		</div>
-		<script src="../../dist/js/app.js"></script>
-	</body>
+	</a>
+	<div id="sumClock">
+		<h1 id="sum"></h1>
+		<h1 id="slash">/</h1>
+		<h2 id="num"></h2>
+	</div>
+	<div id="info">
+		<button id="moreInfo">
+			i
+		</button>
+		<div id="text">
+			<h1>Sum Time Now...</h1>
+
+			<p>This two digit representation was born around a lunch table while contemplating the arbitrary nature of time. Snobby,
+				I know. It was first created in just a few moments of cross faded flurry after only moments of preparation.</p>
+
+			<p>The larger number represents the sum of the digits of the 24 hour clock (13:45 sums to 13) and the smaller number represents
+				the number of times that the larger number has appeared so far today.</p>
+		</div>
+		<div id="fill"></div>
+	</div>
+	<script src="../../dist/js/app.js"></script>
+</body>
 
 </html>

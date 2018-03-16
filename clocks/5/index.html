@@ -1,25 +1,40 @@
 <html>
 
-	<head>
-		<title>New Time:5</title>
-		<link href="https://fonts.googleapis.com/css?family=Oswald:200" rel="stylesheet">
-		<link rel="stylesheet" href="../../css/style.css">
-		<link rel="stylesheet" href="../../css/downClock.css">
-	</head>
+<head>
+	<title>New Time:5</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/downClock.css">
+</head>
 
-	<body>
-		<a href="../../" class="backArrow">
-			<div class="arrowShape">
-			</div>
-		</a>
-		<div id="downClock">
-			<div class="digit" id="h"></div>
-			<div class="marker">:</div>
-			<div class="digit" id="m"></div>
-			<div class="marker">:</div>
-			<div class="digit" id="s"></div>
+<body>
+	<a href="../../" class="backArrow">
+		<div class="arrowShape">
 		</div>
-		<script src="../../dist/js/app.js"></script>
-	</body>
+	</a>
+	<div id="downClock">
+		<div class="digit" id="h"></div>
+		<div class="marker">:</div>
+		<div class="digit" id="m"></div>
+		<div class="marker">:</div>
+		<div class="digit" id="s"></div>
+	</div>
+	<div id="info">
+		<button id="moreInfo">
+			i
+		</button>
+		<div id="text">
+			<h1>Anxious Time</h1>
+
+			<p>A return to something a bit more familiar, this is a typical 24 hours clock, with the notable exception that it counts
+				down from 24:00:00 to 00:00:00 each day.</p>
+			<p>I made this as a reminder not to count down to the ends of things, instead rememebring to enjoy the time as it is, and
+				not waste what is left.</p>
+		</div>
+		<div id="fill"></div>
+	</div>
+	<script src="../../dist/js/app.js"></script>
+</body>
 
 </html>

@@ -1,50 +1,64 @@
 <html>
 
-	<head>
-		<title>New Time: 8</title>
-		<link href="https://fonts.googleapis.com/css?family=Oswald:200" rel="stylesheet">
-		<link rel="stylesheet" href="../../css/style.css">
-		<link rel="stylesheet" href="../../css/digitClock.css">
-	</head>
+<head>
+	<title>New Time: 8</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/digitClock.css">
+</head>
 
-	<body>
-		<a href="../../" class="backArrow">
-			<div class="arrowShape">
-			</div>
-		</a>
-		<div id="digitClock">
-			<div class="digitHolder">
-				<div class="digit" id="1"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="2"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="3"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="4"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="5"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="6"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="7"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="8"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="9"></div>
-			</div>
-			<div class="digitHolder">
-				<div class="digit" id="10"></div>
-			</div>
+<body>
+	<a href="../../" class="backArrow">
+		<div class="arrowShape">
 		</div>
-		<script src="../../dist/js/app.js"></script>
-	</body>
+	</a>
+	<div id="digitClock">
+		<div class="digitHolder">
+			<div class="digit" id="1"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="2"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="3"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="4"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="5"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="6"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="7"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="8"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="9"></div>
+		</div>
+		<div class="digitHolder">
+			<div class="digit" id="10"></div>
+		</div>
+	</div>
+	<div id="info">
+		<button id="moreInfo">
+			i
+		</button>
+		<div id="text">
+			<h1>Accountability</h1>
+
+			<p>Back to a mangling of the digital clock readout, this tallies the represenation of each numberal in the 24 hour representation
+				of the time. From left to right, this clock tells hour how many 0s, how many 1s, how many 2s... and so on up through
+				9s are part of the current time</p>
+		</div>
+		<div id="fill"></div>
+	</div>
+	<script src="../../dist/js/app.js"></script>
+</body>
 
 </html>

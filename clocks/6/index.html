@@ -1,25 +1,42 @@
 <html>
 
-	<head>
-		<title>New Time:5</title>
-		<link href="https://fonts.googleapis.com/css?family=Oswald:200" rel="stylesheet">
-		<link rel="stylesheet" href="../../css/style.css">
-		<link rel="stylesheet" href="../../css/decimalClock.css">
-	</head>
+<head>
+	<title>New Time:6</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/decimalClock.css">
+</head>
 
-	<body>
-		<a href="../../" class="backArrow">
-			<div class="arrowShape">
-			</div>
-		</a>
-		<div id="decimalClock">
-			<div class="digit" id="h"></div>
-			<div class="marker">:</div>
-			<div class="digit" id="m"></div>
-			<div class="marker">:</div>
-			<div class="digit" id="s"></div>
+<body>
+	<a href="../../" class="backArrow">
+		<div class="arrowShape">
 		</div>
-		<script src="../../dist/js/app.js"></script>
-	</body>
+	</a>
+	<div id="decimalClock">
+		<div class="digit" id="h"></div>
+		<div class="marker">:</div>
+		<div class="digit" id="m"></div>
+		<div class="marker">:</div>
+		<div class="digit" id="s"></div>
+	</div>
+	<div id="info">
+		<button id="moreInfo">
+			i
+		</button>
+		<div id="text">
+			<h1>Base 10</h1>
+			<p>While some argue that we should move to a base 12 approach in the rest of our daily life, the digital clock remains one
+				of the only international measures not calculated in a base 10 system.</p>
+			<p>This clock counts 10 hours to a day, 100 minutes to an hour, 100 seconds to a minute.</p>
+			<p>The most surprising thing to me was the fact that the rhythm of seconds ticking by was only slightly different from their
+				current rate. Additionally, our day to day notions of would also not change drastically, with 15 base 10 minutes lasting
+				about 21 base 12 minutes, and a new hour lasting about 85 old minutes</p>
+
+		</div>
+		<div id="fill"></div>
+	</div>
+	<script src="../../dist/js/app.js"></script>
+</body>
 
 </html>

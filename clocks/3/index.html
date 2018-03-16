@@ -1,45 +1,61 @@
 <html>
 
-	<head>
-		<title>New Time: 3</title>
-		<link rel="stylesheet" href="../../css/style.css">
-		<link rel="stylesheet" href="../../css/binaryClock.css">
-	</head>
+<head>
+	<title>New Time: 3</title>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:200,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/binaryClock.css">
+</head>
 
-	<body>
-		<a href="../../" class="backArrow">
-			<div class="arrowShape">
-			</div>
-		</a>
-		<div id="binaryClock">
-			<div id="h" class="timePlace">
-				<div id="h0" class="binaryDigit"></div>
-				<div id="h1" class="binaryDigit"></div>
-				<div id="h2" class="binaryDigit"></div>
-				<div id="h3" class="binaryDigit"></div>
-				<div id="h4" class="binaryDigit"></div>
-				<div id="h5" class="binaryDigit"></div>
-			</div>
-			<div class="mark"></div>
-			<div id="m" class="timePlace">
-				<div id="m0" class="binaryDigit"></div>
-				<div id="m1" class="binaryDigit"></div>
-				<div id="m2" class="binaryDigit"></div>
-				<div id="m3" class="binaryDigit"></div>
-				<div id="m4" class="binaryDigit"></div>
-				<div id="m5" class="binaryDigit"></div>
-			</div>
-			<div class="mark"></div>
-			<div id="s" class="timePlace">
-				<div id="s0" class="binaryDigit"></div>
-				<div id="s1" class="binaryDigit"></div>
-				<div id="s2" class="binaryDigit"></div>
-				<div id="s3" class="binaryDigit"></div>
-				<div id="s4" class="binaryDigit"></div>
-				<div id="s5" class="binaryDigit"></div>
-			</div>
+<body>
+	<a href="../../" class="backArrow">
+		<div class="arrowShape">
 		</div>
-		<script src="../../dist/js/app.js"></script>
-	</body>
+	</a>
+	<div id="binaryClock">
+		<div id="h" class="timePlace">
+			<div id="h0" class="binaryDigit"></div>
+			<div id="h1" class="binaryDigit"></div>
+			<div id="h2" class="binaryDigit"></div>
+			<div id="h3" class="binaryDigit"></div>
+			<div id="h4" class="binaryDigit"></div>
+			<div id="h5" class="binaryDigit"></div>
+		</div>
+		<div class="mark"></div>
+		<div id="m" class="timePlace">
+			<div id="m0" class="binaryDigit"></div>
+			<div id="m1" class="binaryDigit"></div>
+			<div id="m2" class="binaryDigit"></div>
+			<div id="m3" class="binaryDigit"></div>
+			<div id="m4" class="binaryDigit"></div>
+			<div id="m5" class="binaryDigit"></div>
+		</div>
+		<div class="mark"></div>
+		<div id="s" class="timePlace">
+			<div id="s0" class="binaryDigit"></div>
+			<div id="s1" class="binaryDigit"></div>
+			<div id="s2" class="binaryDigit"></div>
+			<div id="s3" class="binaryDigit"></div>
+			<div id="s4" class="binaryDigit"></div>
+			<div id="s5" class="binaryDigit"></div>
+		</div>
+	</div>
+	<div id="info">
+		<button id="moreInfo">
+			i
+		</button>
+		<div id="text">
+			<h1>Binary Time</h1>
+
+			<p>This is a fairly strict binary representation of a digital clock face, with an artistic rendering of the bits.</p>
+			<p>Each section of the face (hours|minutes|seconds) is broken down into it's binary representaiton of 6 digits (10 -> 001010)</p>
+			<p>Those binary digits are then depicted with a tall bar for a [1] and a short bar for a [0]</p>
+			<p>They are animated for visual effect.</p>
+		</div>
+		<div id="fill"></div>
+	</div>
+	<script src="../../dist/js/app.js"></script>
+</body>
 
 </html>
