@@ -1,8 +1,8 @@
-
-#node
-node_modules
-
-#build
-
-#OSX
 .DS_Store
+node_modules
+/build
+/.svelte-kit
+/package
+.env
+.env.*
+!.env.example

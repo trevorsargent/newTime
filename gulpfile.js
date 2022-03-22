@@ -9,18 +9,19 @@ var livereload = require('gulp-livereload');
 var server = require('gulp-server-livereload');
 
 gulp.task('webserver', function () {
-	gulp.src('.')
-		.pipe(server({
+	gulp.src('.').pipe(
+		server({
 			livereload: true,
 			directoryListing: false,
 			open: true
-		}));
+		})
+	);
 });
 
 gulp.task('build', function () {
 	// app.js is your main JS file with all your module inclusions
 	return browserify({ entries: './src/js/app.js', debug: true })
-		.transform("babelify", { presets: ["es2015"] })
+		.transform('babelify', { presets: ['es2015'] })
 		.bundle()
 		.pipe(source('app.js'))
 		.pipe(buffer())
